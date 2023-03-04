@@ -13,13 +13,110 @@ html, body {
     text-align: center;
     background: rgb(0, 0, 0);
     color: white;
-    font-size: 32px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-    margin: 40vh 0;
+    margin: 40vh 0 0 0;
     padding: 0;
+    font-size: 4rem;
+
+    animation-name: jitter;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes jitter {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(1px, -1px);
+    }
+    50% {
+      transform: translate(-1px, 1px);
+    }
+    75% {
+      transform: translate(1px, 1px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+
+.form {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ask{
+    font-size: 20px;
+    color: yellow;
+    background-color: black;
+    border: 1px solid yellow;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+#ask:hover {
+    box-shadow: 0px 0px 15px yellow;
+    animation-name: jitter;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+#query {
+    font-size: 20px;
+    background-color: black;
+    color: yellow;
+    border: 1px solid yellow;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    width: 30rem;
+}
+
+.response-container {
+    text-align: justify;
+    margin: 2rem 0.5rem;
+    max-width: 40rem;
+}
+
+#prompt {
+    color: rgb(185, 185, 185);
+}
+
+#response {
+    color: rgb(255, 205, 205);
+    font-style: italic;
+}
+
+.loading {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
