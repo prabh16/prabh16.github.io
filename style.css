@@ -4,7 +4,6 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: black;
-    overflow: hidden;
 }
 
 .container {
@@ -22,7 +21,7 @@ html, body {
 }
 
 h1 {
-    margin: 40vh 0 0 0;
+    margin: 30vh 0 0 0;
     padding: 0;
     font-size: 4rem;
 
@@ -53,8 +52,10 @@ h1 {
 .form {
     margin-top: 3rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 #ask{
     font-size: 20px;
@@ -84,7 +85,10 @@ h1 {
     padding: 0.5rem 1rem;
     margin: 1rem;
     cursor: pointer;
-    width: 30rem;
+    width: 80%;
+    max-width: 50rem;
+    font-size: 0.8rem;
+    
 }
 
 .response-container {
