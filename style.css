@@ -124,3 +124,8 @@ h1 {
       transform: rotate(360deg);
     }
   }
+
+  #error {
+    color: red;
+    font-size: 2rem;
+  }
